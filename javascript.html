@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
+    <head>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prima lezione javascript</title>
-            <head>
+            
             <style>
-            .button {
+            #miobottone1 {
               display: inline-block;
               padding: 15px 25px;
               font-size: 24px;
@@ -20,9 +21,9 @@
               box-shadow: 0 9px #999;
             }
             
-            .button:hover {background-color: #3e8e41}
+           #miobottone1:hover {background-color: #3e8e41}
             
-            .button:active {
+            #miobottone1:active {
               background-color: #3e8e41;
               box-shadow: 0 5px #666;
               transform: translateY(4px);
@@ -31,14 +32,19 @@
             </head>
             <body>
             
-            <h2>La mia prima pagina html con javascript evidenzia il funzionamento degli eventi associati al premere di un bottone.Il comando "button" è un tag "html" stilizzo il bottone come piace a  </h2>
-
+            <p>La mia prima pagina html con javascript
+                 evidenzia il funzionamento degli eventi associati 
+                 al premere di un bottone
+                 Il comando "button" è un tag "html"
+                  stilizzo il bottone come piace a 
+            </p>
             
-            <button id="miobottone1" onclick="eseguiFinestra"> cliccami per selezionare un allert</button> 
+             <button id="miobottone1" onclick="eseguiFinestra"> cliccami per selezionare un allert</button> 
 
  <script>
-           function eseguiFinestra{}      
+           function eseguiFinestra()      
            {
+
             alert{"ciao sono una specie di potenziale virus"};
            }
            
