@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abitanti città</title>
+</head>
+<body>
+    <h1>Inserisci una città alla cintura di Torino</h1>
+    <input type="text" id="citta" placeholder="Città"><br>
+    <button onclick="abitanti()">Clicca per scoprire gli abitanti</button>
+    <p id="output"></p>
+
+    <script>
+        function abitanti(){
+            let città = document.getElementById("citta").value;
+
+            if (città === "Nichelino") {
+                document.getElementById("output").innerHTML = "46 104";
+            } else if (città === "Moncalieri") {
+
+                document.getElementById("output").innerHTML = "57 000";
+            } else if (città === "Vinovo") {
+
+                document.getElementById("output").innerHTML = "14 800";
+            } else if (città === "Rivoli") {
+
+                document.getElementById("output").innerHTML = "48 800";
+            } else if (città === "Collegno") {
+
+                document.getElementById("output").innerHTML = "48 000";
+            } else if (città === "Settimo") {
+
+                document.getElementById("output").innerHTML = "47 500";
+            } else if (città === "Chieri") {
+                document.getElementById("output").innerHTML = "36 000";
+            } else if (città === "Torino") {
+
+                document.getElementById("output").innerHTML = "875 698";
+            } else {
+
+                document.getElementById("output").innerHTML = "Inserisci una città alla cintura di Torino";
+            }
+        }
+    </script>
+</body>
+</html>
