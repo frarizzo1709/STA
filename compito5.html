@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero pari o dispari</title>
+    
+</head>
+<body>
+    <h1>Inserisci un numero per capire se è pari o dispari</h1>
+    <input type="number" id="numero" placeholder="Inserisci un numero" oninput="inputNumero()">
+    <p id="output"></p>
+
+    <script>
+        function inputNumero() {
+            let numero = document.getElementById("numero").value;
+            numero = Number(numero);
+
+            if (numero % 2 === 0) {
+                document.getElementById("output").innerText = "Il numero che hai inserito " + (numero) + " è un numero pari.";
+            } else {
+                document.getElementById("output").innerText = "Il numero che hai inserito " + (numero) + " è un numero dispari.";
+            }
+        }
+    </script>
+</body>
+</html>
+               
