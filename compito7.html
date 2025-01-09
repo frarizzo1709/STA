@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costo casa</title>
+</head>
+<body>
+    <h1>Valore casa Liguria</h1>
+    <ul>
+        <li>Costo base al m² di una casa a Genova: 5000 € </li>
+        <li>Costo base al m² di una casa a Savona: 7000 € </li>
+        <li>Costo base al m² di una casa a Imperia: 6000 € </li>
+    </ul>
+    <input type="text" id="città" placeholder="Inserisci una città" oninput="calcolaCosto()">
+    <input type="number" id="metriQuadrati" placeholder="Inserisci i m²" oninput="calcolaCosto()">
+    <input type="number" id="distanzadalmare" placeholder="Inserisci la distanza dal mare (in metri)" oninput="calcolaCosto()">
+    <p id="output"></p>
+
+    <script>
+        function calcolaCosto() {
+            let città = document.getElementById("città").value;
+            let metriQuadrati = document.getElementById("metriQuadrati").value;
+            let distanzadalmare = document.getElementById("distanzadalmare").value;
+            let costoBase;
+
+            if (città === "Genova") {
+                costoBase = 5000;
+            } else if (città === "Savona") {
+                costoBase = 7000;
+            } else if (città === "Imperia") {
+                costoBase = 6000;
+            } else {
+                document.getElementById("output").innerText = "La città che hai inserito non è valida, puoi inserire Genova, Savona o Imperia.";
+                return;
+            }
+
+            let incremento;
+            if (distanzadalmare <= 100) {
+                incremento = 3000;
+            } else if (distanzadalmare <= 500) {
+                incremento = 1500;
+            } else {
+                incremento = 500;
+            }
+
+            let costoAlMq = costoBase + incremento;
+            let costoTotale = costoAlMq * metriQuadrati;
+
+            document.getElementById("output").innerText = "Il costo totale per la tua casa è: " + costoTotale + " euro.";
+        }
+    </script>
+</body>
+</html>
