@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html lang="it">
+     <head> 
+        <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+         <title>Calcolo Legge di Ohm</title>
+         </head>
+         <body> 
+ <h1>Calcolo della Legge di Ohm</h1>
+   <p>Seleziona la formula che desideri utilizzare:</p> 
+ <button onclick="calcolaLeggeOhm()">Inizia Calcolo</button>
+  <script> 
+ // Funzione principale
+  function calcolaLeggeOhm() { 
+ let formula = prompt("Quale formula vuoi usare? (1: V=I*R, 2: I=V/R, 3: R=V/I)");
+ if (formula == 1) { 
+ let I = parseFloat(prompt("Inserisci l'intensità di corrente (I) in ampere:"));
+let R = parseFloat(prompt("Inserisci la resistenza (R) in ohm:"));
+ let V = I * R;
+       alert("Il voltaggio (V) è: " + V + " Volt");
+ } else if (formula == 2) {
+ let V = parseFloat(prompt("Inserisci il voltaggio (V) in Volt:"));
+let R = parseFloat(prompt("Inserisci la resistenza (R) in ohm:"));
+let I = V / R; 
+alert("L'intensità di corrente (I) è: " + I + " Ampere"); 
+} else if (formula == 3) {
+let V = parseFloat(prompt("Inserisci il voltaggio (V) in Volt:"));
+let I = parseFloat(prompt("Inserisci l'intensità di corrente (I) in ampere:")); 
+let R = V / I;
+alert("La resistenza (R) è: " + R + " Ohm"); 
+ } else { 
+alert("Scelta non valida. Riprova."); } }
+</script>
+</body> 
+</html> 
