@@ -9,27 +9,32 @@
  <h1>Calcolo della Legge di Ohm</h1>
    <p>Seleziona la formula che desideri utilizzare:</p> 
  <button onclick="calcolaLeggeOhm()">Inizia Calcolo</button>
-  <script> 
- // Funzione principale
-  function calcolaLeggeOhm() { 
- let formula = prompt("Quale formula vuoi usare? (1: V=I*R, 2: I=V/R, 3: R=V/I)");
- if (formula == 1) { 
- let I = parseFloat(prompt("Inserisci l'intensità di corrente (I) in ampere:"));
-let R = parseFloat(prompt("Inserisci la resistenza (R) in ohm:"));
- let V = I * R;
-       alert("Il voltaggio (V) è: " + V + " Volt");
- } else if (formula == 2) {
- let V = parseFloat(prompt("Inserisci il voltaggio (V) in Volt:"));
-let R = parseFloat(prompt("Inserisci la resistenza (R) in ohm:"));
-let I = V / R; 
-alert("L'intensità di corrente (I) è: " + I + " Ampere"); 
-} else if (formula == 3) {
-let V = parseFloat(prompt("Inserisci il voltaggio (V) in Volt:"));
-let I = parseFloat(prompt("Inserisci l'intensità di corrente (I) in ampere:")); 
-let R = V / I;
-alert("La resistenza (R) è: " + R + " Ohm"); 
- } else { 
-alert("Scelta non valida. Riprova."); } }
-</script>
-</body> 
-</html> 
+  <input type="text" id="formula" placeholder="Inserisci una formula (1, 2 o 3)" oninput="calcola()"><br>
+    <input type="text" id="v1" placeholder="Inserisci il primo valore" oninput="calcola()"><br>
+    <input type="text" id="v2" placeholder="Inserisci il secondo valore" oninput="calcola()"><br>
+    
+    <p id="output"></p>
+
+    <script>
+        function calcola() {
+            let formula = document.getElementById("formula").value;
+            let v1 = document.getElementById("v1").value;
+            let v2 = document.getElementById("v2").value;
+            let risultato;
+
+            if (formula == "1") {
+                risultato = v1 * v2;
+                document.getElementById("output").innerText = "Il voltaggio (V) è: " + risultato + " Volt";
+            } else if (formula == "2") {
+                risultato = v1 / v2;
+                document.getElementById("output").innerText = "L'intensità di corrente (I) è: " + risultato + " Ampere";
+            } else if (formula == "3") {
+                risultato = v1 / v2;
+                document.getElementById("output").innerText = "La resistenza (R) è: " + risultato + " Ohm";
+            } else {
+                document.getElementById("output").innerText = "Seleziona una formula valida (1, 2 o 3).";
+            }
+        }
+    </script>
+</body>
+</html>
