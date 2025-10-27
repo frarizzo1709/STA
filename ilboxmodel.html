@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Il Box Model</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+    <div class="card">
+        <h3>  il boxel model     </h3>
+        <p>       pagina box model </p>
+     <style>
+    .card{
+          width:300px;
+          border:1px solid grey;
+          padding:15px;
+          margin:20px
+          border-box: box-sizing
+        }
+    </style>
+     
+    </div>
+    
+    
+    <div class="box box1">
+        Questa è la prima scatola. Ha padding, bordo e margine.
+    </div>
+    <div class="box box2">
+        Questa scatola usa `box-sizing: border-box`, quindi la sua larghezza totale (300px) include padding e bordo.
+    </div>
+</body>
